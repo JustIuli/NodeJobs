@@ -1,0 +1,64 @@
+<%- include('./components/header.ejs') %>
+<%- include('./components/nav.ejs') %>
+<main>
+    <a href="/" class="inline-block text-black ml-4 mb-4"
+        ><i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+    <div class="mx-4">
+        <div class="bg-gray-50 border border-gray-200 p-10 rounded">
+            <header>
+                <h1
+                    class="text-3xl text-center font-bold my-6 uppercase"
+                >
+                    Manage Gigs
+                </h1>
+            </header>
+
+            <table class="w-full table-auto rounded-sm">
+                <tbody>
+                    <% if (listings.length === 0) { %>
+                            <h1 class="text-lg text-center">You dont have any listing to manage</h1>
+                    <% } %>
+
+
+                    <% for (let listing of listings) { %>
+                    <tr class="border-gray-300">
+                            <td
+                            class="px-4 py-8 border-t border-b border-gray-300 text-lg"
+                        >
+                            <a href="/listing/<%= listing._id %>">
+                                <%= listing.jobTitle %>
+                            </a>
+                        </td>
+                        <td
+                            class="px-4 py-8 border-t border-b border-gray-300 text-lg"
+                        >
+                            <a
+                                href="/listing/edit/<%= listing._id %>"
+                                class="text-blue-400 px-6 py-2 rounded-xl"
+                                ><i
+                                    class="fa-solid fa-pen-to-square"
+                                ></i>
+                                Edit</a
+                            >
+                        </td>
+                        <td
+                            class="px-4 py-8 border-t border-b border-gray-300 text-lg"
+                        >
+                            <form action="/deletelisting" method="POST">
+                                <input type="hidden" name="listingId" value="<%=listing._id%>">
+                                <button class="text-red-600">
+                                    <i
+                                        class="fa-solid fa-trash-can"
+                                    ></i>
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

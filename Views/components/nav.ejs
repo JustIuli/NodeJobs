@@ -1,0 +1,33 @@
+<nav class="flex justify-between items-center mb-4">
+    <a href="/"
+        ><img class="m-2 w-32" src="images/logo.png" alt="" class="logo"
+    /></a>
+    <ul class="flex space-x-6 mr-6 text-lg">
+        <% if (!auth) { %>
+        <li>
+            <a href="/register" class="hover:text-primary"
+                ><i class="fa-solid fa-user-plus"></i> Register</a
+            >
+        </li>
+        <li>
+            <a href="/login" class="hover:text-primary"
+                ><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                Login</a
+            >
+        </li>
+        <% } else { %>
+        <li>
+            <form action="/logout" method="post" class="hover:text-primary">
+                <button type="submit">
+                    <i class="fa-solid fa-door-closed"></i> Logout
+                </button>
+            </form>
+            <li>
+                <a href="/manage" class="hover:text-primary"
+                    ><i class="fa-solid fa-gear"></i> Manage Gigs</a
+                >
+            </li>
+        </li>
+        <% } %>
+    </ul>
+</nav>
