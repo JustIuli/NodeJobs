@@ -4,7 +4,10 @@ NodeJobs is a web application for listing job opportunities in the tech industry
 
 ## Credits
 
-This project is based on the concept and design of the "LaraGigs" app by Brad Traversy. We are grateful for his invaluable teachings and inspiration in building this platform. If you're interested in the original Laravel version, be sure to check out his course.
+This project is based on the concept and design of the "LaraGigs" app by Brad Traversy. I am grateful for his invaluable teachings and inspiration in teaching. If you're interested in the original Laravel version, be sure to check out his course.
+or github repo:
+
+[Link to Brad Traversy's LaraGigs Repository](https://github.com/bradtraversy/laragigs)
 
 ## Getting Started
 
