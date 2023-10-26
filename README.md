@@ -14,8 +14,8 @@ NodeJobs uses MongoDB Atlas as its database. If you prefer a different database 
 
 To set up MongoDB Atlas:
 
-    Create a MongoDB Atlas account.
+    -Create a MongoDB Atlas account.
 
-    Set up a database and collection.
+    -Set up a database and collection.
 
-    Add your MongoDB Atlas connection string to the .env file.
+    -Add your MongoDB Atlas connection string to the .env file.
